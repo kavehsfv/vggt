@@ -110,7 +110,7 @@ def handle_uploads(input_video, input_images):
 
     # Create a unique folder name
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-    target_dir = f"input_images_{timestamp}"
+    target_dir = f"results/input_images_{timestamp}"
     target_dir_images = os.path.join(target_dir, "images")
 
     # Clean up if somehow that folder already exists
@@ -321,6 +321,7 @@ great_wall_video = "examples/videos/great_wall.mp4"
 colosseum_video = "examples/videos/Colosseum.mp4"
 room_video = "examples/videos/room.mp4"
 kitchen_video = "examples/videos/kitchen.mp4"
+horse_video = "examples/videos/horse.mp4"
 fern_video = "examples/videos/fern.mp4"
 single_cartoon_video = "examples/videos/single_cartoon.mp4"
 single_oil_painting_video = "examples/videos/single_oil_painting.mp4"
@@ -476,6 +477,7 @@ with gr.Blocks(
         [single_oil_painting_video, "1", None, 20.0, False, False, True, True, "Depthmap and Camera Branch", "True"],
         [room_video, "8", None, 5.0, False, False, True, False, "Depthmap and Camera Branch", "True"],
         [kitchen_video, "25", None, 50.0, False, False, True, False, "Depthmap and Camera Branch", "True"],
+        [horse_video, "21", None, 50.0, False, False, True, False, "Depthmap and Camera Branch", "True"],
         [fern_video, "20", None, 45.0, False, False, True, False, "Depthmap and Camera Branch", "True"],
     ]
 

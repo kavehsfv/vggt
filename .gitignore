@@ -148,3 +148,7 @@ skyseg.onnx
 # pixi environments
 .pixi
 *.egg-info
+examples/kitchen_me/*
+results/*
+examples/horse
+examples/videos
